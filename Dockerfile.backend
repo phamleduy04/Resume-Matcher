@@ -18,6 +18,9 @@ RUN pip install uv
 # Set working directory
 WORKDIR /app
 
+# Create data directory for SQLite database
+RUN mkdir -p /app/data
+
 # Copy backend files
 COPY apps/backend/ .
 
